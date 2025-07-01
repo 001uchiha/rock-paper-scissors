@@ -4,8 +4,34 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Rock Paper Scissors</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<script src="script.js"></script>
+	<div id="gameContainer">
+		<div class="header">Rock Paper Scissors</div>
+	  	<div class="board-container">
+		    <div class="score">
+		      <h3 class="score-text">Score</h3>
+		      <div class="scoreboard">
+		        <p>Player <span id="humanScore">0</span></p>
+		        <p>Computer <span id="computerScore">0</span></p>
+		      </div>
+		    </div>
+		    <div class="buttons">
+		      <button class="choice" data-choice="rock">✊</button>
+		      <button class="choice" data-choice="paper">🖐</button>
+		      <button class="choice" data-choice='scissors'>✌</button>
+		    </div>
+		    <div class="show-result">
+		      <div id="result">Choose your option</div>
+		      <div id="result-msg">The Game ends after 5 Wins</div>
+		    </div>
+	  	</div>
+  	</div>
+  	<div id="gameOverPopup" class="popup hidden">
+	   <p id="finalResult"></p>
+	   <button onclick="restartGame()">🔁 Play Again</button>
+	</div>
+  	<script src="script.js"></script>
 </body>
 </html>
